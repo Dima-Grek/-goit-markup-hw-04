@@ -15,6 +15,7 @@
     --card-set-gap: 30px;
     --btn-link: 50px;
     --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --box-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .body {
@@ -395,9 +396,6 @@ p {
 }
 
 
-/*стили текста страница портфолио*/
-
-
 /*адрес*/
 
 .adress {
@@ -486,6 +484,7 @@ p {
 }
 
 .card2 {
+    margin-top: 30px;
     background: #FFFFFF;
     box-sizing: border-box;
 }
@@ -547,4 +546,85 @@ p {
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+}
+
+
+/*постоянные клиенты*/
+
+.thumb-icons {
+    margin-top: 16px;
+    padding-bottom: 30px;
+}
+
+.social-icons {
+    display: inline-flex;
+}
+
+.social-icons-item-company:not(:last-child) {
+    margin-right: 30px;
+}
+
+.social-icons-link-company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.social-icons-link-company:hover>.social-icons-company-svg,
+.social-icons-link-company:focus>.social-icons-company-svg {
+    fill: #2196F3;
+}
+
+.social-icons-link-company:hover,
+.social-icons-link-company:focus {
+    background-color: #ffffff;
+    border-color: #2196F3;
+}
+
+.social-icons-company-svg {
+    width: 100px;
+    height: 50px;
+    fill: #AFB1B8;
+}
+
+
+/*skills*/
+
+.thumb-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
+.social-icons-skills-svg {
+    width: 60px;
+    height: 60px;
+}
+
+.social-icons-skills-svg:hover,
+.social-icons-skills-svg:focus {
+    fill: #2196F3;
+}
+
+
+/*тень*/
+
+.btn-portfolio-cl:hover,
+.btn-portfolio-cl:focus {
+    box-shadow: var(--box-card-shadow);
+}
+
+.card1:hover,
+.card1:focus {
+    box-shadow: var(--box-card-shadow);
 }
