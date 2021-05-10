@@ -72,6 +72,7 @@ p {
 
 .page-header .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 80px;
@@ -182,6 +183,12 @@ p {
     background-color: var(--dark-bg-color);
 }
 
+.img-bg {
+    background-image: url("../images/icons/bgteam.png");
+    max-width: 1600px;
+    background-size: cover;
+}
+
 
 /*главный заголовок*/
 
@@ -259,6 +266,7 @@ p {
 
 .nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-right: auto;
 }
@@ -516,6 +524,7 @@ p {
 
 .social-icons {
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 .social-icons-item:not(:last-child) {
@@ -554,10 +563,6 @@ p {
 .thumb-icons {
     margin-top: 16px;
     padding-bottom: 30px;
-}
-
-.social-icons {
-    display: inline-flex;
 }
 
 .social-icons-item-company:not(:last-child) {
