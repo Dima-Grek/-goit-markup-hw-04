@@ -64,6 +64,8 @@ p {
 }
 
 .header {
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--header-color);
     border-bottom: solid;
     border-width: thin;
@@ -75,7 +77,6 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
 }
 
 
@@ -141,24 +142,82 @@ p {
 
 /*почта-телефон-вверху*/
 
+.header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .info-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     color: inherit;
     font-weight: 500;
     font-size: 14px;
-    line-height: 0.88;
+    line-height: 1, 71;
     letter-spacing: 0.02em;
 }
 
 .info {
     text-decoration: none;
     color: inherit;
-    line-height: 1.71;
+    line-height: 1, 71;
     letter-spacing: 0.03em;
 }
 
 .info:hover,
 .info:focus {
     color: var(--link-alt-color);
+}
+
+.info-header:hover+.social-icons-envelope-svg,
+.info-header:focus+.social-icons-envelope-svg {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}
+
+
+/*
+.social-icons-smartphone-svg:hover,
+.social-icons-smartphone-svg:focus {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}*/
+
+
+/*
+.info-header:hover,
+.info-header:focus {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}
+*/
+
+
+/*
+.social-icons-envelope-svg:hover,
+.social-icons-envelope-svg:focus {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}
+*/
+
+.social-icons-envelope-svg {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: #757575;
+}
+
+.social-icons-smartphone-svg {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: #757575;
 }
 
 
@@ -180,13 +239,13 @@ p {
     padding-top: 200px;
     padding-bottom: 200px;
     align-items: center;
-    background-color: var(--dark-bg-color);
 }
 
 .img-bg {
-    background-image: url("../images/icons/bgteam.png");
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/bgteam.png);
     max-width: 1600px;
     background-size: cover;
+    background-color: var(--dark-bg-color);
 }
 
 
@@ -273,6 +332,13 @@ p {
 
 .menu {
     display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    display: block;
 }
 
 .menu-item:not(:last-child) {
@@ -291,17 +357,6 @@ p {
     margin: 0px;
     padding-left: 0;
     list-style: none;
-}
-
-.container>.list-flex {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: stretch;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .container>.item-flex {
@@ -431,8 +486,7 @@ p {
 
 .footer-flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .img {
@@ -632,4 +686,74 @@ p {
 .card1:hover,
 .card1:focus {
     box-shadow: var(--box-card-shadow);
+}
+
+.thumb-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Присоединяйтесь*/
+
+.footer-flex-icons {
+    margin-left: 70px;
+}
+
+.page-footer-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1, 71;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.thumb-footer-icons {
+    margin-top: 20px;
+}
+
+.social-footer-icons-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-footer-icons-link:hover,
+.social-footer-icons-link:focus {
+    background-color: #2196F3;
+}
+
+.social-footer-icons-svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+.social-icons-link:hover>.social-icons-svg,
+.social-icons-link:focus>.social-icons-svg {
+    fill: #ffffff;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+    background-color: #2196F3;
+}
+
+.social-icons-svg {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+
+.social-icons-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
